@@ -11,12 +11,20 @@
           ><v-col class="col-auto shrinky"><router-view /></v-col
           ><v-col><TabbdContent /></v-col></v-row></v-container
     ></v-main>
+    <v-footer>
+      <v-img
+        alt="Beat Saber Logo"
+        contain
+        src="./assets/BSLogo.png"
+        max-height="56px"
+      />
+    </v-footer>
   </v-app>
 </template>
 
 <style>
 .shrinky {
-min-height: 0vh;
+  min-height: 0vh;
 }
 .growy {
   min-height: 100vh;
