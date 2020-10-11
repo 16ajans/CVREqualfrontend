@@ -2,7 +2,9 @@
 
 I totally know what I'm doing.
 
-[Showcase](https://imgur.com/a/zE5eg8a)
+**[Showcase](https://imgur.com/a/zE5eg8a)**
+
+Is mobile responsive, needs API implementation for auth, pin gen, and score fetching.
 
 ### Compiles and hot-reloads for development
 ```
