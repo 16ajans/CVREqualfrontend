@@ -1,35 +1,40 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="CVRE Logo"
-          class="shrink mr-2"
-          contain
-          src="./assets/logo.png"
-          transition="scale-transition"
-          width="60"
-        />
-      </div>
-      bodge central
-      <v-spacer></v-spacer>
-      lol gay
-    </v-app-bar>
-
-    <v-main> </v-main>
+    <v-main>
+      <v-app-bar color="primary">
+        <div>
+          <v-img
+            alt="CVRE Logo"
+            contain
+            src="./assets/logo.png"
+          />
+        </div>
+      </v-app-bar>
+      <v-container>
+        <v-row
+          ><v-col class="col-auto"><Login /></v-col
+          ><v-col><TabbdContent /></v-col></v-row></v-container
+    ></v-main>
   </v-app>
 </template>
 
 <script>
+import Login from "./components/login";
+import TabbdContent from "./components/tabbdContent";
+// import Dash from "./components/dash";
+
 export default {
   name: "App",
 
   components: {
-    //
+    Login,
+    TabbdContent,
+    // Dash,
   },
 
   data: () => ({
     //
   }),
+  
 };
 </script>
