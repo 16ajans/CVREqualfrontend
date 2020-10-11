@@ -1,6 +1,6 @@
 <template>
   <v-app
-    ><v-card class="pa-2" min-width="300" max-width="420" v-show="!registering"
+    ><v-card class="pa-2" min-width="300" v-show="!registering"
       ><v-card-title class="pb-0">Login</v-card-title
       ><v-form
         ><v-container
