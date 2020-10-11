@@ -1,5 +1,7 @@
 # frontend
 
+I totally know what I'm doing.
+
 ## Project setup
 ```
 npm install
