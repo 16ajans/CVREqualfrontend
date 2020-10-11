@@ -15,7 +15,9 @@
             label="Password"
             @click:append="showPaswd = !showPaswd"
           ></v-text-field
-          ><v-btn class="mt-4" color="primary" @click="login()">Submit</v-btn></v-container
+          ><v-btn class="mt-4" color="primary" @click="login()"
+            >Submit</v-btn
+          ></v-container
         ></v-form
       ></v-card
     ><v-card class="pa-2" min-width="300" max-width="420" v-show="registering"
@@ -50,7 +52,8 @@
           <v-btn class="mt-4" color="primary">Submit</v-btn></v-container
         ></v-form
       ></v-card
-    ><a class="ml-auto"
+    ><a
+      class="ml-auto"
       small
       @click="
         registering = !registering;
@@ -80,8 +83,8 @@ export default {
   },
   methods: {
     login: function () {
-      this.$router.push('/dash')
-    }
+      this.$router.push("/dash");
+    },
   },
 };
 </script>

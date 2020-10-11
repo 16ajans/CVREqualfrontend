@@ -14,6 +14,9 @@ export default new Vuetify({
         secondary: colors.black,
         // accent: colors.lolwut,
       },
+      light: {
+        primary: '#703692',
+      },
     },
   },
 })
