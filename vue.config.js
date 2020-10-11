@@ -3,13 +3,13 @@ module.exports = {
     "vuetify"
   ]
 }
-/*module.exports = {
+module.exports = {
   chainWebpack: config => {
     config
       .plugin('html')
       .tap(args => {
-        args[0].title = 'Your new title'
+        args[0].title = 'the CVRE Qualifier dash'
         return args
       })
   }
-}*/
+}
