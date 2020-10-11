@@ -2,6 +2,8 @@
 
 I totally know what I'm doing.
 
+[Showcase](https://imgur.com/a/zE5eg8a)
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
