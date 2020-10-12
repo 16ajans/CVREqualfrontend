@@ -6,6 +6,8 @@ I totally know what I'm doing.
 
 Is mobile responsive, needs API implementation for auth, pin gen, and score fetching.
 
+Now fetches most recent song submissions on page load. Yaaayy
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
