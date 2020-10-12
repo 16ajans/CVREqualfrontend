@@ -6,13 +6,14 @@
         ><v-tab>Current Rankings</v-tab></v-tabs
       ><v-tabs-items v-model="tab"
         ><v-tab-item
-          ><v-card elevation="2" class="ma-2" v-for="n in 10" :key="n"
+          ><v-card elevation="2" class="ma-2" v-for="record in this.recents(10)" :key="record.id"
             ><v-card-title
-              ><span class="avoidwrap">SongName %%.%%</span><pre> - </pre>
-              <span class="avoidwrap"> Player Name (School)</span></v-card-title
+              ><span class="avoidwrap">{{ record.mapInfo.songName }} {{ (record.accuracy * 100).toFixed(2) }}%</span>
+              <pre> - </pre>
+              <span class="avoidwrap"> {{ record.username }}<span v-if="record.team"> ({{ record.team }})</span></span></v-card-title
             >
             <v-card-subtitle
-              >000,000 points - date time</v-card-subtitle
+              >{{ record.score }} points - {{ (new Date(Date.parse(record.time))).toLocaleString() }}</v-card-subtitle
             ></v-card
           ></v-tab-item
         ><v-tab-item
@@ -57,7 +58,25 @@ export default {
   data() {
     return {
       tab: null,
+      scores: [],
     };
+  },
+  methods: {
+    nab: async function () {
+      let reponse = await fetch("https://cvrescores.herokuapp.com/api/scores");
+      this.scores = await reponse.json();
+      // console.log(this.scores[0].username === "Sc2ad");
+    },
+    recents: function (num) {
+      let recs = [];
+      for (let i = this.scores.length - 1; i >= this.scores.length - num; i--) {
+        recs.push(this.scores[i]);
+      }
+      return recs;
+    }
+  },
+  created() {
+    this.nab();
   },
 };
 </script>
