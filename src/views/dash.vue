@@ -1,6 +1,6 @@
 <template>
   <v-app
-    ><v-card class="pa-2" min-width="300" max-width="420" v-show="!registering"
+    ><v-card class="pa-2" min-width="300" max-width="420" 
       ><v-card-title>Dashboard</v-card-title
       ><v-card-subtitle>Firstname Lastname</v-card-subtitle
       ><v-container
