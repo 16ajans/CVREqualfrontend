@@ -47,7 +47,7 @@
           ><v-select
             :items="schools"
             :rules="[rules.required]"
-            label="School"
+            label="School/Team"
           ></v-select>
           <v-btn class="mt-4" color="primary">Submit</v-btn></v-container
         ></v-form
