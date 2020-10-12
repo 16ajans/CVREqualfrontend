@@ -1,11 +1,12 @@
 <template>
   <v-app class="growy">
-    <v-main>
-      <v-app-bar app color="primary">
+    <v-app-bar app color="primary">
         <div>
           <v-img alt="CVRE Logo" contain src="./assets/logo.png" />
         </div>
       </v-app-bar>
+    <v-main>
+      
       <v-container>
         <v-row justify="center"
           ><v-col class="col-auto shrinky"><router-view /></v-col
