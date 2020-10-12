@@ -6,14 +6,27 @@
         ><v-tab>Current Rankings</v-tab></v-tabs
       ><v-tabs-items v-model="tab"
         ><v-tab-item
-          ><v-card elevation="2" class="ma-2" v-for="record in this.recents(10)" :key="record.id"
+          ><v-card
+            elevation="2"
+            class="ma-2"
+            v-for="record in this.recents(10)"
+            :key="record.id"
             ><v-card-title
-              ><span class="avoidwrap">{{ record.mapInfo.songName }} {{ (record.accuracy * 100).toFixed(2) }}%</span>
+              ><span class="avoidwrap"
+                >{{ record.mapName }}
+                {{ (record.accuracy * 100).toFixed(2) }}%</span
+              >
               <pre> - </pre>
-              <span class="avoidwrap"> {{ record.username }}<span v-if="record.team"> ({{ record.team }})</span></span></v-card-title
+              <span class="avoidwrap">
+                {{ record.username
+                }}<span v-if="record.team"> ({{ record.team }})</span></span
+              ></v-card-title
             >
             <v-card-subtitle
-              >{{ record.score }} points - {{ (new Date(Date.parse(record.time))).toLocaleString() }}</v-card-subtitle
+              >{{ record.score }} points -
+              {{
+                new Date(Date.parse(record.time)).toLocaleString()
+              }}</v-card-subtitle
             ></v-card
           ></v-tab-item
         ><v-tab-item
@@ -30,12 +43,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="n in 16" :key="n">
-                    <td>{{ n }}</td>
-                    <td>Username</td>
-                    <td>School</td>
+                  <tr v-for="n in 3" :key="n">
                     <td>0</td>
-                    <td>000,000</td>
+                    <td>{{ n }}</td>
+                    <td>{{ n }}</td>
+                    <td>{{ n }}</td>
+                    <td>{{ n }}</td>
                   </tr>
                 </tbody>
               </template>
@@ -62,10 +75,9 @@ export default {
     };
   },
   methods: {
-    nab: async function () {
+    nabNgo: async function () {
       let reponse = await fetch("https://cvrescores.herokuapp.com/api/scores");
       this.scores = await reponse.json();
-      // console.log(this.scores[0].username === "Sc2ad");
     },
     recents: function (num) {
       let recs = [];
@@ -73,10 +85,10 @@ export default {
         recs.push(this.scores[i]);
       }
       return recs;
-    }
+    },
   },
   created() {
-    this.nab();
+    this.nabNgo();
   },
 };
 </script>
